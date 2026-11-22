@@ -339,6 +339,8 @@ section{position:relative}
 /* servizi detail */
 .srv-layout{display:grid;gap:40px}
 @media(min-width:1024px){.srv-layout{grid-template-columns:260px 1fr;gap:60px}}
+.srv-layout>*,.form-layout>*,.contact-grid>*,.about-grid>*{min-width:0}
+html,body{max-width:100%}
 .srv-index{display:none}
 @media(min-width:1024px){.srv-index{display:block;position:sticky;top:calc(var(--header) + 30px);align-self:start}}
 .srv-index a{display:flex;gap:12px;padding:9px 0;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line);transition:color .2s}
@@ -444,7 +446,9 @@ a.crow:hover{border-color:rgba(22,119,255,.5)}
 .legal h2{font-size:22px;margin:38px 0 12px}
 .legal p,.legal li{color:#B9C3CF;margin-bottom:12px;font-size:15.5px}
 .legal ul{padding-left:20px}
-.legal .tbc{margin-bottom:24px}
+.legal .tbc{margin-bottom:24px;white-space:normal}
+.tbc{max-width:100%}
+@media(max-width:600px){.tbc{white-space:normal}}
 
 /* footer */
 .footer{border-top:1px solid var(--line);padding:70px 0 40px;background:linear-gradient(180deg,var(--black),#060a12)}
